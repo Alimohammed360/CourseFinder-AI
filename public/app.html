@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CourseFinder AI - Search Tool</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="index.html" class="logo-link">
+          <span class="logo-icon">🎓</span>
+          <span class="logo-text">CourseFinder AI</span>
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html" class="nav-cta">Back to Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main App Container -->
+  <div class="app-container">
+    <div class="container">
+      <h1>CourseFinder AI</h1>
+      <form id="course-form">
+        <label for="course-input">What course do you want to learn?
+          <button type="button" class="operator-btn" id="course-operator-btn" title="Set operator for course">OR</button>
+        </label>
+        <input type="text" id="course-input" name="course" placeholder="e.g. Python, Data Science" required>
+
+        <label for="platforms-select">Platforms
+          <button type="button" class="operator-btn" id="platforms-operator-btn" title="Set operator for platforms">OR</button>
+        </label>
+        <div id="platforms-dropdown" class="custom-dropdown"></div>
+
+        <label for="formats-select">File Formats
+          <button type="button" class="operator-btn" id="formats-operator-btn" title="Set operator for file formats">OR</button>
+        </label>
+        <div id="formats-dropdown" class="custom-dropdown"></div>
+
+        <button type="submit" id="generate-btn">Generate Google Search</button>
+      </form>
+
+      <div id="output" class="output" style="display:none;">
+        <div id="query-box">
+          <strong>Generated Query:</strong>
+          <pre id="generated-query"></pre>
+        </div>
+        <div class="output-actions">
+          <button id="copy-btn">Copy Query</button>
+          <a id="search-btn" href="#" target="_blank" rel="noopener">
+            Search on Google
+          </a>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        💡 <em>Tip: Use words like 'full course', 'beginner', and 'pdf' for better results.</em>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 
